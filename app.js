@@ -7,11 +7,11 @@
  */
 "use strict";
 
-var jsDAV = require("./../lib/jsdav");
+var jsDAV = require("./lib/jsdav");
 jsDAV.debugMode = true;
-var jsDAV_Locks_Backend_FS = require("./../lib/DAV/plugins/locks/fs");
+var jsDAV_Locks_Backend_FS = require("./lib/DAV/plugins/locks/fs");
 
 jsDAV.createServer({
-    node: __dirname + "/../test/assets",
+    node: __dirname + "./test/assets",
     locksBackend: jsDAV_Locks_Backend_FS.new(__dirname + "/../test/assets")
 }, 8000);
